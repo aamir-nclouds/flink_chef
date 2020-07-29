@@ -15,5 +15,5 @@ run_list 'flink_installation::default'
 # Specify a custom source for a single cookbook:
 cookbook 'flink_installation', path: '.'
 
-cookbook 'remote_file_s3', '~> 1.1.0', :supermarket
+
 
