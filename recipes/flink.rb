@@ -1,5 +1,5 @@
-package 'oracle-java7-installer' do
-    action :install
+apt_package 'default-jdk' do
+    action :install 
 end
 
 
