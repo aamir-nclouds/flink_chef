@@ -19,37 +19,3 @@ execute 'flink' do
     command 'sudo bash /flink-1.11.1/bin/start-cluster.sh'
     action :run
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
