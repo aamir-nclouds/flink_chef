@@ -4,7 +4,7 @@ end
 
 
 remote_file '/tmp/flink-1.11.1-bin-scala_2.11.tgz' do
-    source 'https://aamir-nclouds.s3.amazonaws.com/flink-1.11.1-bin-scala_2.11.tgz'
+    source "https://#{node['s3Bucket']['name']}/#{node['s3File']['name']}"
     action :create
 end
 
