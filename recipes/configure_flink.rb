@@ -14,7 +14,7 @@ remote_file '/tmp/Updated-Flink.tgz' do
 end
 
 execute 'extract_flink' do
-    command 'unzip Updated-Flink.tgz && mv /tmp/Updated-Flink/conf/flink-conf.yaml /flink-1.11.1/conf && mv /tmp/Updated-Flink/conf/log4j.properties /flink-1.11.1/conf'
+    command 'unzip /tmp/Updated-Flink.tgz && mv /tmp/Updated-Flink/conf/flink-conf.yaml /flink-1.11.1/conf && mv /tmp/Updated-Flink/conf/log4j.properties /flink-1.11.1/conf'
     action :run
 end
 
