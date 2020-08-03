@@ -19,12 +19,14 @@ execute 'extract_flink' do
 end
 
 execute 'move_conf' do
-    command 'sudo mv /Updated-Flink/conf/flink-conf.yaml /flink-1.11.1/conf'
+    user "root"
+    command 'sudo mv /Updated_Flink/conf/flink-conf.yaml /flink-1.11.1/conf'
     action :run
 end
-
-execute 'extract_log4j' do
-    command 'sudo mv /Updated-Flink/conf/log4j.properties /flink-1.11.1/conf'
+  
+execute 'move_log' do
+    user "root"
+    command 'sudo mv /Updated_Flink/conf/log4j.properties /flink-1.11.1/conf'
     action :run
 end
 
