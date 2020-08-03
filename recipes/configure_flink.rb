@@ -14,7 +14,17 @@ remote_file '/tmp/Updated-Flink.tgz' do
 end
 
 execute 'extract_flink' do
-    command 'unzip /tmp/Updated-Flink.tgz && sudo mv /Updated-Flink/conf/flink-conf.yaml /flink-1.11.1/conf && sudo mv /Updated-Flink/conf/log4j.properties /flink-1.11.1/conf'
+    command 'unzip /tmp/Updated-Flink.tgz'
+    action :run
+end
+
+execute 'move_conf' do
+    command 'sudo mv /Updated-Flink/conf/flink-conf.yaml /flink-1.11.1/conf'
+    action :run
+end
+
+execute 'extract_log4j' do
+    command 'sudo mv /Updated-Flink/conf/log4j.properties /flink-1.11.1/conf'
     action :run
 end
 
