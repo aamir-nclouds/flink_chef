@@ -14,7 +14,7 @@ remote_file '/tmp/Updated-Flink.tgz' do
 end
 
 execute 'extract_flink' do
-    command 'unzip /tmp/Updated-Flink.tgz'
+    command 'tar zxvf /tmp/Updated-Flink.tgz'
     action :run
 end
 
