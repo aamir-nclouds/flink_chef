@@ -1,3 +1,7 @@
+apt_package 'unzip' do
+    action :install 
+end
+
 execute 'flink_stop' do
     command 'sudo bash /flink-1.11.1/bin/stop-cluster.sh'
     action :run
@@ -10,7 +14,7 @@ remote_file '/tmp/Updated-Flink.tgz' do
 end
 
 execute 'extract_flink' do
-    command 'tar zxvf /tmp/Updated-Flink.tgz -C / && mv /Updated-Flink/conf/flink-conf.yaml /flink-1.11.1/conf && mv /Updated-Flink/conf/log4j.properties /flink-1.11.1/conf'
+    command 'unzip Updated-Flink.tgz && mv /tmp/Updated-Flink/conf/flink-conf.yaml /flink-1.11.1/conf && mv /tmp/Updated-Flink/conf/log4j.properties /flink-1.11.1/conf'
     action :run
 end
 
