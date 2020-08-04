@@ -20,13 +20,13 @@ end
 
 execute 'move_conf' do
     user "root"
-    command 'sudo mv /Updated_Flink/conf/flink-conf.yaml /flink-1.11.1/conf'
+    command 'sudo mv Updated-Flink/conf/flink-conf.yaml /flink-1.11.1/conf'
     action :run
 end
   
 execute 'move_log' do
     user "root"
-    command 'sudo mv /Updated_Flink/conf/log4j.properties /flink-1.11.1/conf'
+    command 'sudo mv Updated-Flink/conf/log4j.properties /flink-1.11.1/conf'
     action :run
 end
 
